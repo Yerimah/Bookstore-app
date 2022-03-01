@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
-  const NavItem = [
+  const navItems = [
     {
         id: 0,
         path: '/',
@@ -16,15 +16,15 @@ const Nav = () => {
   ];
 
     return (
-        <header className='navbar'>
+        <header className="navbar">
             <h1>Bookstore CMS</h1>
 
             <div>
-                <ul className='menulinks'> 
+                <ul className="menulinks"> 
                     {
-                      links.map((link) =>(
-                        <li key={link.id}>
-                          <NavLink to={link.path} className='menu-item'>{link.text}</NavLink>
+                      navItems.map((navItems) =>(
+                        <li key={navItems.id}>
+                          <NavLink to={navItems.path} className="menu-item">{navItems.text}</NavLink>
                         </li>
                       ))
                         
