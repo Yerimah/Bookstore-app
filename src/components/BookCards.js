@@ -1,12 +1,12 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from './redux/books/books';
+import { removeBook } from '../redux/books/books';
 
 const BookCard = () => {
-  const bookState = useSelector((state) => state.bookReducer);
+  const bookState = useSelector((state) => state.booksReducer);
   const dispatch = useDispatch();
   const removeHandler = (e) => {
-      dispatch(removeBook(e.target.id));
+    dispatch(removeBook(e.target.id));
   };
 
   if (bookState !== []) {
