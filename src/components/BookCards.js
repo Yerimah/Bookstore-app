@@ -1,34 +1,58 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeBook } from './redux/books/books';
 
-const BookCard = () => (
-  <div className="book-card">
-    <div className="bookinfo">
-      <span>Action</span>
-      <h1>The Hunger Games</h1>
-      <span>Suzanne Collins</span>
+const BookCard = () => {
+  const bookState = useSelector((state) => state.bookReducer);
+  const dispatch = useDispatch();
+  const removeHandler = (e) => {
+      dispatch(removeBook(e.target.id));
+  };
 
-      <ul>
-        <li>
-          <button key="btn-comment" type="button">Comments</button>
-        </li>
-        <li>
-          <button key="btn-remove" type="button">Remove</button>
-        </li>
-        <li>
-          <button key="btn-edit" type="button">Edit</button>
-        </li>
-      </ul>
-    </div>
-    <div className="progress-chart">
-      <span>64%</span>
-      <span>completed</span>
-    </div>
-    <div className="view-progress">
-      <span>Current chapter</span>
-      <h3>Chapter 17</h3>
-      <button type="button">Update progress</button>
-    </div>
-  </div>
-);
+  if (bookState !== []) {
+    return (
+      <>
+        {bookState.map((book) => (
+          <div key={book.id} className="book-card">
+            <div className="book-info">
+              <span className="book-category">{book.category}</span>
+              <h2>{book.title}</h2>
+              <span>{book.author}</span>
+              <div className="container">
+                <ul>
+                  <li>
+                    <button id={book.id} type="button">
+                      Comments
+                    </button>
+                  </li>
+                  <li>
+                    <button id={book.id} type="button">
+                      Edit
+                    </button>
+                  </li>
+                  <li>
+                    <button id={book.id} type="button" onClick={removeHandler}>
+                      Remove
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="progress">
+              <span>64%</span>
+              <span>completed</span>
+            </div>
+            <div className="view-progress">
+              <span>Current chapter</span>
+              <h3>Chapter 5</h3>
+              <button id={book.id} type="button">Update progress</button>
+            </div>
+          </div>
+        ))}
+      </>
+    );
+  }
+  return (<h2>No books added yet</h2>);
+};
 
 export default BookCard;

@@ -5,8 +5,9 @@ const initialState = [];
 
 export const addBook = payload => ({
     type: ADD_BOOK,
-    payload
-})
+    payload,
+});
+
 export const removeBook = payload => ({
     type: REMOVE_BOOK,
     payload,
