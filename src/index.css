@@ -5,7 +5,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 body {
@@ -19,7 +18,7 @@ body {
   padding: 30px 100px;
   background-color: white;
   justify-content: space-between;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
 }
 
 .inside-nav {
@@ -36,7 +35,6 @@ body {
 .menulinks {
   display: flex;
   list-style-type: none;
-  
 }
 
 .menu-item {
@@ -56,10 +54,9 @@ body {
   display: flex;
   padding: 50px 40px;
   background-color: white;
-    margin: 30px 100px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
+  margin: 30px 100px;
+  border-radius: 4px;
+  justify-content: space-between;
 }
 
 .title {
@@ -105,7 +102,6 @@ body {
   font-weight: 300;
   font-size: 17px;
   cursor: pointer;
-  
 }
 
 .border-right {
