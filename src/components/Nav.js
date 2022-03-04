@@ -17,7 +17,7 @@ const Nav = () => {
 
   return (
     <header className="navbar">
-      <h1>Bookstore CMS</h1>
+      <h1 className='store-lg'>Bookstore CMS</h1>
 
       <div>
         <ul className="menulinks">
