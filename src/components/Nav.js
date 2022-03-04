@@ -19,10 +19,10 @@ const Nav = () => {
   return (
     <header className="navbar">
       <div className="inside-nav">
-      <h1 className='store-lg'>Bookstore CMS</h1>
-      <div>
-        <ul className="menulinks">
-          {
+        <h1 className="store-lg">Bookstore CMS</h1>
+        <div>
+          <ul className="menulinks">
+            {
                       navItems.map((navItems) => (
                         <li key={navItems.id}>
                           <NavLink to={navItems.path} className="menu-item">{navItems.text}</NavLink>
@@ -31,8 +31,8 @@ const Nav = () => {
 
                     }
 
-        </ul>
-      </div>
+          </ul>
+        </div>
       </div>
       <img className="proficon" src={NavIcon} alt="Nav icon" />
       <Outlet />

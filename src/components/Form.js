@@ -36,20 +36,21 @@ const Form = () => {
 
   return (
     <form className="addform" onSubmit={submitHandler}>
-      <input 
-      className="input-title"
-      name="title" 
-      type="text" 
-      placeholder="Book title" 
-      value={inputText.title} 
-      onChange={changeHandler} />
-      {/* <input name="author" type="text" placeholder="Author" value={inputText.author} onChange={changeHandler} /> */}
-      <select 
-      className="category-input"
-      name="category" 
-      onChange={changeHandler} 
-      value={inputText.category}>
-        
+      <input
+        className="input-title"
+        name="title"
+        type="text"
+        placeholder="Book title"
+        value={inputText.title}
+        onChange={changeHandler}
+      />
+      <select
+        className="category-input"
+        name="category"
+        onChange={changeHandler}
+        value={inputText.category}
+      >
+
         <option value="" hidden>Category</option>
         <option value="Motivation">Motivation</option>
         <option name="Action">Action</option>

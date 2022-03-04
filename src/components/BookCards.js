@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadBook, removeBook } from '../redux/books/books';
-import StatusIcon from '../../src/Images/status-icon.png';
+import StatusIcon from '../Images/status-icon.png';
 
 const BookCard = () => {
   const bookState = useSelector((state) => state.booksReducer);
@@ -46,10 +46,10 @@ const BookCard = () => {
             </div>
           </div>
           <div className="progress">
-          <img className='progress-icon' src={StatusIcon} alt="circular status icon" />
-            <div className='metrics'>  
-            <span className="percent">64%</span>
-            <span className="state">completed</span>
+            <img className="progress-icon" src={StatusIcon} alt="circular status icon" />
+            <div className="metrics">
+              <span className="percent">64%</span>
+              <span className="state">completed</span>
             </div>
           </div>
           <div className="view-progress">
