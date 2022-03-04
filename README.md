@@ -1,14 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# BOOKS AND LIBRARIES APP
+# BOOKSTORE CMS APP
 
-> This app is for book lovers and all who would love to build a habit of reading. It makes the 
-> reading experience convenient for you. With the **Books And Libraries**, you can easily track
+> This app is for book lovers and everyone interested in building a disciplined reading habit. It makes the 
+> reading experience convenient for you. With the **Bookstore CMS**, you can easily track
 > your progress on the books you're reading. It provides a centralized location for you to get a 
 > snapshot of your reading habit.
 
 ## App Screenshot
-![](./src/images/appScreenshot.PNG)
+![Bookstore](https://user-images.githubusercontent.com/71140133/156852698-3915451e-e2db-41ba-90b5-b6e43f14214a.PNG)
 
 ## Built With
 
@@ -54,4 +54,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT]() licensed.
+This project is [MIT](https://github.com/Yerimah/React-Bookstore-app/blob/dev-branch/MIT.md) licensed.
