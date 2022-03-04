@@ -5,8 +5,8 @@ import BookCard from './BookCards';
 const Books = () => (
   <main>
     <BookCard />
-    <h2 className="add-book">ADD NEW BOOK</h2>
     <hr />
+    <h2 className="add-book">ADD NEW BOOK</h2>
     <Form />
   </main>
 );

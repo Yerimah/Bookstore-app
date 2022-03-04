@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
+import NavIcon from '../Images/profile-icon.png';
 
 const Nav = () => {
   const navItems = [
@@ -17,8 +18,8 @@ const Nav = () => {
 
   return (
     <header className="navbar">
+      <div className="inside-nav">
       <h1 className='store-lg'>Bookstore CMS</h1>
-
       <div>
         <ul className="menulinks">
           {
@@ -32,6 +33,9 @@ const Nav = () => {
 
         </ul>
       </div>
+      </div>
+      <img className="proficon" src={NavIcon} alt="Nav icon" />
+      <Outlet />
     </header>
   );
 };
