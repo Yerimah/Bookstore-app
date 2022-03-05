@@ -52,7 +52,7 @@ body {
 
 .book-card {
   display: flex;
-  padding: 50px 40px;
+  padding: 50px 40px 50px;
   background-color: white;
   margin: 30px 100px;
   border-radius: 4px;
@@ -111,6 +111,11 @@ body {
 
 .progress {
   display: flex;
+  align-items: center;
+  margin: 0;
+  border-right: 1px solid rgb(209, 209, 209);
+  padding-right: 100px;
+  height: 5.375rem;
 }
 
 .progress-icon {
@@ -173,6 +178,7 @@ body {
   padding: 8px 5px;
   height: 2.813rem;
   margin-right: 20px;
+  opacity: 0.5;
 }
 
 .category-input {
@@ -180,6 +186,7 @@ body {
   width: 25%;
   padding: 8px 5px;
   height: 2.813rem;
+  opacity: 0.5;
 }
 
 .add-btn {
