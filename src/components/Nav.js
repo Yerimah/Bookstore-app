@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
+import NavIcon from '../Images/profile-icon.png';
 
 const Nav = () => {
   const navItems = [
@@ -17,11 +18,11 @@ const Nav = () => {
 
   return (
     <header className="navbar">
-      <h1>Bookstore CMS</h1>
-
-      <div>
-        <ul className="menulinks">
-          {
+      <div className="inside-nav">
+        <h1 className="store-lg">Bookstore CMS</h1>
+        <div>
+          <ul className="menulinks">
+            {
                       navItems.map((navItems) => (
                         <li key={navItems.id}>
                           <NavLink to={navItems.path} className="menu-item">{navItems.text}</NavLink>
@@ -30,8 +31,11 @@ const Nav = () => {
 
                     }
 
-        </ul>
+          </ul>
+        </div>
       </div>
+      <img className="proficon" src={NavIcon} alt="Nav icon" />
+      <Outlet />
     </header>
   );
 };
